@@ -1,0 +1,31 @@
+{
+  "name": "react-floating-label-input",
+  "version": "1.0.0",
+  "description": "Floating label text input",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vdemedes/react-floating-label-input.git"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "component"
+  ],
+  "author": "Vadim Demedes <vdemedes@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vdemedes/react-floating-label-input/issues"
+  },
+  "homepage": "https://github.com/vdemedes/react-floating-label-input#readme",
+  "devDependencies": {
+    "http-server": "^0.8.0"
+  },
+  "files": [
+    "index.js",
+    "index.css"
+  ]
+}

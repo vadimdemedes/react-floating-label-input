@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+    <style>
+    body {
+      font-family: 'Source Sans Pro';
+      font-size: 16px;
+      color: #444;
+      padding: 40px;
+    }
+
+    input {
+      font-size: 16px;
+    }
+
+    .custom-input {
+      width: 300px;
+      border-color: #aaa;
+      border-radius: 2px;
+      padding: 2px 8px;
+      margin-bottom: 20px;
+    }
+
+    .custom-input.is-active {
+      border-color: #FC7470;
+    }
+
+    .custom-input label {
+      color: #FC7470;
+    }
+
+    .custom-input input {
+      padding: 4px 0;
+      color: #444;
+    }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <script>
+    function require () {
+      return React;
+    }
+
+    module = {};
+    </script>
+    <script type="text/jsx" src="index.js"></script>
+    <script type="text/jsx">
+    window.onload = function () {
+      React.render((
+        <div>
+          <Input label="Email address" className="custom-input" />
+          <Input label="Password" type="password" className="custom-input" />
+        </div>
+      ), document.body);
+    };
+    </script>
+  </head>
+
+  <body>
+  </body>
+</html>
