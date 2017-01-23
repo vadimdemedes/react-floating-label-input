@@ -56,9 +56,17 @@ var Input = React.createClass({
   }
 });
 
+Input.propTypes = {
+  label: React.PropTypes.string.isRequired,
+  type: React.PropTypes.string,
+  className: React.PropTypes.className,
+}
+
 
 /**
  * Expose component
  */
 
-module.exports = Input;
+if (module && module.exports) {
+  module.exports = Input;
+}
