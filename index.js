@@ -24,6 +24,10 @@ var Input = React.createClass({
     this.setState({
       isActive: value.length > 0
     });
+
+    if (this.props.onChange) {
+      this.props.onChange(e);
+    }
   },
 
   getInitialClasses: function () {
@@ -45,20 +49,36 @@ var Input = React.createClass({
 
     var classes = this.getInitialClasses();
 
+    var inputProps = {};
+    if (typeof this.props.value === 'string') {
+      // make input controlled
+      inputProps['value'] = this.props.value;
+    }
+
     if (this.state.isActive) {
       classes.push('is-active');
     }
 
     return <div className={ classes.join(' ') }>
       <label>{ this.props.label }</label>
-      <input type={ type } placeholder={ this.props.label } onChange={ this.onChange } />
+      <input type={ type } placeholder={ this.props.label } onChange={ this.onChange } {...inputProps} />
     </div>;
   }
 });
+
+Input.propTypes = {
+  label: React.PropTypes.string.isRequired,
+  type: React.PropTypes.string,
+  className: React.PropTypes.className,
+  onChange: React.PropTypes.func,
+  value: React.PropTypes.string,
+}
 
 
 /**
  * Expose component
  */
 
-module.exports = Input;
+if (module && module.exports) {
+  module.exports = Input;
+}
